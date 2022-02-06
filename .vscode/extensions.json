@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"ms-dotnettools.csharp",
+		"k--kato.docomment",
+		"fudge.auto-using",
+		"wayou.vscode-todo-highlight",
+		"streetsidesoftware.code-spell-checker"
+	]
+}

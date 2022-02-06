@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{428BE6B5-D018-4AC4-AEFC-8D8B4973F3E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexoToCoinTracker", "src\NexoToCoinTracker\NexoToCoinTracker.csproj", "{5AD75C22-7D7B-4931-AE51-244360C88A2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8EF0C25F-A5EF-4DDD-B622-78E515799560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexoToCoinTrackerTests", "test\NexoToCoinTrackerTest\NexoToCoinTrackerTests.csproj", "{DBE1E332-A9C0-4A74-81FF-780D44CB8CD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AD75C22-7D7B-4931-AE51-244360C88A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD75C22-7D7B-4931-AE51-244360C88A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD75C22-7D7B-4931-AE51-244360C88A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD75C22-7D7B-4931-AE51-244360C88A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE1E332-A9C0-4A74-81FF-780D44CB8CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE1E332-A9C0-4A74-81FF-780D44CB8CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE1E332-A9C0-4A74-81FF-780D44CB8CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE1E332-A9C0-4A74-81FF-780D44CB8CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5AD75C22-7D7B-4931-AE51-244360C88A2C} = {428BE6B5-D018-4AC4-AEFC-8D8B4973F3E7}
+		{DBE1E332-A9C0-4A74-81FF-780D44CB8CD9} = {8EF0C25F-A5EF-4DDD-B622-78E515799560}
+	EndGlobalSection
+EndGlobal
