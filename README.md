@@ -26,6 +26,19 @@ CoinTracker cannot classify Interest on Nexo to Interest on CoinTracker, so it i
 
 ## USAGE
 
-`> ntoc -i nexo.csv -o cointracker.csv`
+`> ntoc.exe -i nexo.csv -o cointracker.csv`
 
 This will convert the given, existing Nexo CSV file to a valid CoinTracker CSV import file.  Output file is created if it doesn't exist.  Any existing output file will be overwritten.
+
+You can control the logging output level using an `appsettings.json` file in the same directory as the executable.  You can find out more information about controlling the logging output at Microsoft's [Logging in .NET](https://docs.microsoft.com/en-us/dotnet/core/extensions/logging) page.  A sample [appsettings.json](./src/ntoc/appsettings.json) file is given in source.
+
+## BUILD LOCALLY
+
+`> dotnet publish -c Release -r (RID) --self-contained true`
+
+`(RID)` can be replaced with a runtime identifier for your system.  See the [.NET RID Catalog](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog) for more information.
+
+## TODO
+
+- Unit tests
+- Integration tests

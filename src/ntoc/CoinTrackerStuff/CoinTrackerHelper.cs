@@ -9,14 +9,17 @@ namespace NexoToCoinTracker
 	{
 		private readonly ILogger<CoinTrackerHelper> _logger;
 		private readonly Options _options;
+		private readonly IFileWrapper _fileWrapper;
 
 		public CoinTrackerHelper(
 			ILogger<CoinTrackerHelper> logger,
-			Options options
+			Options options,
+			IFileWrapper fileWrapper
 		)
 		{
 			_logger = logger;
 			_options = options;
+			_fileWrapper = fileWrapper;
 		}
 
 		public IEnumerable<CoinTrackerCSV> Convert(IEnumerable<NexoCSV> nexoLines)
@@ -53,12 +56,12 @@ namespace NexoToCoinTracker
 
 		public async Task WriteFile(IEnumerable<CoinTrackerCSV> coinTrackerLines)
 		{
-			if (File.Exists(_options.OutputFile))
+			if (_fileWrapper.Exists(_options.OutputFile))
 			{
 				_logger.LogInformation("Output file {File} will be overwritten.", _options.OutputFile);
 			}
 
-			using (FileStream fs = File.Create(_options.OutputFile))
+			using (FileStream fs = _fileWrapper.Create(_options.OutputFile))
 			using (StreamWriter sw = new StreamWriter(fs))
 			{
 				await sw.WriteLineAsync(CoinTrackerConstants.CSVHeaderLine);

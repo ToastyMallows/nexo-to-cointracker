@@ -30,7 +30,8 @@ namespace NexoToCoinTracker
 								.AddHostedService<HostedService>()
 								.AddSingleton(options)
 								.AddSingleton<NexoParser>()
-								.AddSingleton<CoinTrackerHelper>();
+								.AddSingleton<CoinTrackerHelper>()
+								.AddSingleton<IFileWrapper, FileWrapper>();
 						})
 						.RunConsoleAsync();
 				});
